@@ -11,10 +11,25 @@ from PIL import Image
 from src.config import CLASS_NAMES,map_label
 from src.download_dataset import safe_extract
 from src.prepare_dataset import discover,split_rows
-from src.predict import format_prediction
+from src.predict import format_prediction, predict, load_predictor
 from src.utils import build_model,preprocess
 
 class PipelineTests(unittest.TestCase):
+    def test_prediction_file_errors(self):
+        with tempfile.TemporaryDirectory() as temp:
+            with self.assertRaises(FileNotFoundError): predict(Path(temp)/'missing.jpg')
+            text=Path(temp)/'image.txt'; text.write_text('not an image')
+            with self.assertRaises(ValueError): predict(text)
+            bad=Path(temp)/'bad.jpg'; bad.write_bytes(b'corrupt')
+            with self.assertRaises(OSError): predict(bad)
+
+    def test_invalid_prediction_metadata(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            (root/'class_names.json').write_text(json.dumps(CLASS_NAMES))
+            (root/'model_metadata.json').write_text(json.dumps({'class_names':list(reversed(CLASS_NAMES))}))
+            with self.assertRaises(ValueError): load_predictor(str(root))
+
     def test_class_order_and_mapping(self):
         self.assertEqual(CLASS_NAMES,['plastic','metal','paper_cardboard','other'])
         for category,label in [('Plastic','plastic'),('plastic','plastic'),('Metal','metal'),('metal','metal'),('Paper','paper_cardboard'),('cardboard','paper_cardboard'),('Glass','other'),('Food Organics','other'),('unknown','other')]:

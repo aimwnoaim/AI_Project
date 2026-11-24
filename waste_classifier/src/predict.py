@@ -24,6 +24,11 @@ def load_predictor(model_dir='models'):
     if metadata.get('class_names')!=CLASS_NAMES or json.loads((root/'class_names.json').read_text())!=CLASS_NAMES:
         raise ValueError('Invalid class metadata')
     if metadata.get('input_size')!=[224,224,3]: raise ValueError('Invalid input metadata')
+    if metadata.get('class_indices') != {name:i for i,name in enumerate(CLASS_NAMES)}:
+        raise ValueError('Invalid class-index metadata')
+    threshold=metadata.get('confidence_threshold')
+    if not isinstance(threshold,(int,float)) or not 0<=threshold<=1:
+        raise ValueError('Invalid confidence-threshold metadata')
     model=tf.keras.models.load_model(root/'waste_mobilenetv2.keras',compile=False)
     if model.output_shape[-1]!=4: raise ValueError('Invalid output shape')
     return model,metadata

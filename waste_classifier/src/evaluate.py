@@ -24,6 +24,7 @@ def main():
         probabilities=model.predict(dataset(frame),verbose=0); frame=frame.copy(); frame['predicted']=probabilities.argmax(1); frame['confidence']=probabilities.max(1)
         for i,label in enumerate(CLASS_NAMES): frame['prob_'+label]=probabilities[:,i]
         report=metrics(frame); report['per_source']={s:metrics(group) for s,group in frame.groupby('source')}
+        pd.DataFrame([dict(source=source,**{k:v for k,v in scores.items() if k!='report'}) for source,scores in report['per_source'].items()]).to_csv(out/(name+'_source_metrics.csv'),index=False)
         report['other_original_categories']={}
         for (source,category),group in frame[frame.label=='other'].groupby(['source','original_category']):
             report['other_original_categories'][source+'/'+category]={'count':len(group),'predicted_counts':{CLASS_NAMES[int(k)]:int(v) for k,v in group.predicted.value_counts().items()}}
