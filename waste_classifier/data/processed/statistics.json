@@ -1,0 +1,249 @@
+{
+  "counts": [
+    {
+      "source": "realwaste",
+      "split": "test",
+      "label": "metal",
+      "original_category": "Metal",
+      "count": 118
+    },
+    {
+      "source": "realwaste",
+      "split": "test",
+      "label": "other",
+      "original_category": "Food Organics",
+      "count": 62
+    },
+    {
+      "source": "realwaste",
+      "split": "test",
+      "label": "other",
+      "original_category": "Glass",
+      "count": 63
+    },
+    {
+      "source": "realwaste",
+      "split": "test",
+      "label": "other",
+      "original_category": "Miscellaneous Trash",
+      "count": 74
+    },
+    {
+      "source": "realwaste",
+      "split": "test",
+      "label": "other",
+      "original_category": "Textile Trash",
+      "count": 48
+    },
+    {
+      "source": "realwaste",
+      "split": "test",
+      "label": "other",
+      "original_category": "Vegetation",
+      "count": 66
+    },
+    {
+      "source": "realwaste",
+      "split": "test",
+      "label": "paper_cardboard",
+      "original_category": "Cardboard",
+      "count": 70
+    },
+    {
+      "source": "realwaste",
+      "split": "test",
+      "label": "paper_cardboard",
+      "original_category": "Paper",
+      "count": 75
+    },
+    {
+      "source": "realwaste",
+      "split": "test",
+      "label": "plastic",
+      "original_category": "Plastic",
+      "count": 138
+    },
+    {
+      "source": "realwaste",
+      "split": "train",
+      "label": "metal",
+      "original_category": "Metal",
+      "count": 554
+    },
+    {
+      "source": "realwaste",
+      "split": "train",
+      "label": "other",
+      "original_category": "Food Organics",
+      "count": 286
+    },
+    {
+      "source": "realwaste",
+      "split": "train",
+      "label": "other",
+      "original_category": "Glass",
+      "count": 295
+    },
+    {
+      "source": "realwaste",
+      "split": "train",
+      "label": "other",
+      "original_category": "Miscellaneous Trash",
+      "count": 346
+    },
+    {
+      "source": "realwaste",
+      "split": "train",
+      "label": "other",
+      "original_category": "Textile Trash",
+      "count": 222
+    },
+    {
+      "source": "realwaste",
+      "split": "train",
+      "label": "other",
+      "original_category": "Vegetation",
+      "count": 305
+    },
+    {
+      "source": "realwaste",
+      "split": "train",
+      "label": "paper_cardboard",
+      "original_category": "Cardboard",
+      "count": 322
+    },
+    {
+      "source": "realwaste",
+      "split": "train",
+      "label": "paper_cardboard",
+      "original_category": "Paper",
+      "count": 350
+    },
+    {
+      "source": "realwaste",
+      "split": "train",
+      "label": "plastic",
+      "original_category": "Plastic",
+      "count": 645
+    },
+    {
+      "source": "realwaste",
+      "split": "val",
+      "label": "metal",
+      "original_category": "Metal",
+      "count": 118
+    },
+    {
+      "source": "realwaste",
+      "split": "val",
+      "label": "other",
+      "original_category": "Food Organics",
+      "count": 63
+    },
+    {
+      "source": "realwaste",
+      "split": "val",
+      "label": "other",
+      "original_category": "Glass",
+      "count": 62
+    },
+    {
+      "source": "realwaste",
+      "split": "val",
+      "label": "other",
+      "original_category": "Miscellaneous Trash",
+      "count": 75
+    },
+    {
+      "source": "realwaste",
+      "split": "val",
+      "label": "other",
+      "original_category": "Textile Trash",
+      "count": 48
+    },
+    {
+      "source": "realwaste",
+      "split": "val",
+      "label": "other",
+      "original_category": "Vegetation",
+      "count": 65
+    },
+    {
+      "source": "realwaste",
+      "split": "val",
+      "label": "paper_cardboard",
+      "original_category": "Cardboard",
+      "count": 69
+    },
+    {
+      "source": "realwaste",
+      "split": "val",
+      "label": "paper_cardboard",
+      "original_category": "Paper",
+      "count": 75
+    },
+    {
+      "source": "realwaste",
+      "split": "val",
+      "label": "plastic",
+      "original_category": "Plastic",
+      "count": 138
+    }
+  ],
+  "class_weights": {
+    "0": 1.2887596899224807,
+    "1": 1.5004512635379061,
+    "2": 1.2369791666666667,
+    "3": 0.5716987620357634
+  },
+  "duplicate_rows": 0,
+  "rejected": [],
+  "mapping": [
+    {
+      "source": "realwaste",
+      "original_category": "Cardboard",
+      "label": "paper_cardboard"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Food Organics",
+      "label": "other"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Glass",
+      "label": "other"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Metal",
+      "label": "metal"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Miscellaneous Trash",
+      "label": "other"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Paper",
+      "label": "paper_cardboard"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Plastic",
+      "label": "plastic"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Textile Trash",
+      "label": "other"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Vegetation",
+      "label": "other"
+    }
+  ],
+  "limitation": "No physical-item IDs are provided. Item independence cannot be guaranteed; this test does not prove performance on unseen physical objects."
+}

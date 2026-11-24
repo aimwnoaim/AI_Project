@@ -1,5 +1,8 @@
 """Two-stage MobileNetV2 training; select checkpoint using validation only."""
 import argparse
+import sys
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
 from datetime import datetime, timezone
 import json
 from pathlib import Path

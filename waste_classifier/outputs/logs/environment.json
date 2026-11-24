@@ -1,0 +1,7 @@
+{
+  "python": "3.11.9",
+  "tensorflow": "2.16.1",
+  "devices": [
+    "CPU"
+  ]
+}
