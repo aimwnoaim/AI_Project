@@ -6,3 +6,5 @@ __pycache__/
 venv/
 .env
 *.partial
+data/processed/cache_*
+models/*_initial.keras

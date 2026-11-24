@@ -4,6 +4,18 @@ from pathlib import Path
 import shutil
 import urllib.request
 import zipfile
+import json
+
+def check_ucimlrepo():
+    """Record whether UCI's tabular client supplies actual image bytes/paths."""
+    try:
+        from ucimlrepo import fetch_ucirepo
+        result = fetch_ucirepo(id=908)
+        features = result.data.features
+        return {'available': features is not None, 'columns': list(features.columns) if features is not None else [],
+                'decision': 'Use the official image archive; tabular metadata is not a verified image collection.'}
+    except Exception as exc:
+        return {'available': False, 'error': str(exc), 'decision': 'Use official UCI image archive.'}
 
 SOURCES = {
     'realwaste': 'https://archive.ics.uci.edu/static/public/908/realwaste.zip',
@@ -26,7 +38,11 @@ def main():
     for source in SOURCES:
         parser.add_argument(f'--{source}-path', type=Path)
     args = parser.parse_args()
+    log = Path('outputs/logs'); log.mkdir(parents=True,exist_ok=True)
+    (log/'ucimlrepo_check.json').write_text(json.dumps(check_ucimlrepo(),indent=2))
     for source, url in SOURCES.items():
+        if source == 'trashnet' and args.trashnet_path is None:
+            continue
         local = getattr(args, source + '_path')
         root = Path('data/raw')
         root.mkdir(parents=True, exist_ok=True)
