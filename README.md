@@ -67,16 +67,39 @@ The pipeline command validates/prepares the dataset, runs synthetic unit tests, 
 
 ### Laptop webcam
 
-From `waste_classifier` in your activated Python environment:
+For an existing clone, open PowerShell in the repository root and run:
 
 ```powershell
+git switch dev
+git pull --ff-only
+cd waste_classifier
+.\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements-camera.txt
 python -m src.webcam
 ```
 
+If you have not created the environment, use Python 3.10 or 3.11 and run these commands from `waste_classifier` first:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements-camera.txt
+python -m src.webcam
+```
+
+If camera 0 is not the correct camera:
+
+```powershell
+python -m src.webcam --camera 1
+```
+
+The window displays the predicted class, confidence, all four class scores, and inference time in milliseconds. Model weights load once and are reused for subsequent frames. You do not need to download the dataset or retrain to use the published model.
+
 Press Q or Escape to exit. Try `--camera 1` if camera 0 is not your webcam. Close Zoom/Teams or other camera apps and allow desktop camera access if the camera cannot open. Present one item at a time with good lighting. The preview shows all class scores and returns retry below the threshold; it is whole-frame classification, not object detection. Frames remain local and are not recorded or uploaded. The webcam hardware preview has not been verified on this machine.
 
-The repository is downloadable remotely, but **no hosted inference API or web server is deployed**. Another computer can clone the repository, install dependencies, and run prediction locally. A future remote service must load the model and metadata and expose its own API.
+### Remote use
+
+Anyone with repository access can download the trained model and run it on another computer. **No hosted inference API or web server is deployed.** Sending camera images over a network for predictions requires a separately deployed inference service that loads the model and metadata. Cloning this repository alone does not create an online prediction endpoint.
 
 From `waste_classifier`:
 
