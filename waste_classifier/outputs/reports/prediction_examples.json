@@ -1,0 +1,65 @@
+{
+  "examples": [
+    {
+      "image": "data/raw/realwaste/realwaste-main/RealWaste/Plastic/Plastic_101.jpg",
+      "expected": "plastic",
+      "prediction": {
+        "label": "plastic",
+        "confidence": 0.9769220352172852,
+        "should_sort": true,
+        "probabilities": {
+          "plastic": 0.9769220352172852,
+          "metal": 0.0035552866756916046,
+          "paper_cardboard": 0.0001892915170174092,
+          "other": 0.01933343894779682
+        }
+      }
+    },
+    {
+      "image": "data/raw/realwaste/realwaste-main/RealWaste/Metal/Metal_107.jpg",
+      "expected": "metal",
+      "prediction": {
+        "label": "metal",
+        "confidence": 0.9968922734260559,
+        "should_sort": true,
+        "probabilities": {
+          "plastic": 0.0007029552361927927,
+          "metal": 0.9968922734260559,
+          "paper_cardboard": 0.0013307947665452957,
+          "other": 0.0010739490389823914
+        }
+      }
+    },
+    {
+      "image": "data/raw/realwaste/realwaste-main/RealWaste/Cardboard/Cardboard_1.jpg",
+      "expected": "paper_cardboard",
+      "prediction": {
+        "label": "retry",
+        "confidence": 0.4685487449169159,
+        "should_sort": false,
+        "probabilities": {
+          "plastic": 0.0027851471677422523,
+          "metal": 0.08750883489847183,
+          "paper_cardboard": 0.4685487449169159,
+          "other": 0.44115719199180603
+        }
+      }
+    },
+    {
+      "image": "data/raw/realwaste/realwaste-main/RealWaste/Food Organics/Food Organics_1.jpg",
+      "expected": "other",
+      "prediction": {
+        "label": "other",
+        "confidence": 0.9998522996902466,
+        "should_sort": true,
+        "probabilities": {
+          "plastic": 5.558146585826762e-05,
+          "metal": 1.5688397070334759e-06,
+          "paper_cardboard": 9.055269038071856e-05,
+          "other": 0.9998522996902466
+        }
+      }
+    }
+  ],
+  "model_cache": "CacheInfo(hits=3, misses=1, maxsize=2, currsize=1)"
+}

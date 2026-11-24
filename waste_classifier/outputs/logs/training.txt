@@ -1,0 +1,58 @@
+2026-11-24 17:24:11.727914: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-24 17:24:17.101646: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+{"python": "3.11.9", "tensorflow": "2.16.1", "devices": ["CPU"]}
+2026-11-24 17:24:27.942140: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\keras\src\backend\tensorflow\core.py:184: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+Epoch 1/15
+2026-11-24 17:25:06.062357: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:450] ShuffleDatasetV3:2: Filling up shuffle buffer (this may take a while): 3283 of 3325
+2026-11-24 17:25:06.254198: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:480] Shuffle buffer filled.
+104/104 - 157s - 2s/step - accuracy: 0.6214 - loss: 0.9488 - val_accuracy: 0.7616 - val_loss: 0.6337 - learning_rate: 0.0010
+Epoch 2/15
+104/104 - 159s - 2s/step - accuracy: 0.7450 - loss: 0.6455 - val_accuracy: 0.7896 - val_loss: 0.5634 - learning_rate: 0.0010
+Epoch 3/15
+104/104 - 142s - 1s/step - accuracy: 0.7802 - loss: 0.5692 - val_accuracy: 0.7980 - val_loss: 0.5253 - learning_rate: 0.0010
+Epoch 4/15
+104/104 - 143s - 1s/step - accuracy: 0.7925 - loss: 0.5227 - val_accuracy: 0.8022 - val_loss: 0.5501 - learning_rate: 0.0010
+Epoch 5/15
+104/104 - 130s - 1s/step - accuracy: 0.8135 - loss: 0.4768 - val_accuracy: 0.8079 - val_loss: 0.5028 - learning_rate: 0.0010
+Epoch 6/15
+104/104 - 134s - 1s/step - accuracy: 0.8162 - loss: 0.4595 - val_accuracy: 0.7980 - val_loss: 0.5338 - learning_rate: 0.0010
+Epoch 7/15
+104/104 - 162s - 2s/step - accuracy: 0.8232 - loss: 0.4428 - val_accuracy: 0.8247 - val_loss: 0.4862 - learning_rate: 0.0010
+Epoch 8/15
+104/104 - 127s - 1s/step - accuracy: 0.8292 - loss: 0.4305 - val_accuracy: 0.8065 - val_loss: 0.4975 - learning_rate: 0.0010
+Epoch 9/15
+104/104 - 114s - 1s/step - accuracy: 0.8310 - loss: 0.4197 - val_accuracy: 0.8163 - val_loss: 0.4876 - learning_rate: 0.0010
+Epoch 10/15
+104/104 - 111s - 1s/step - accuracy: 0.8466 - loss: 0.3921 - val_accuracy: 0.8135 - val_loss: 0.5246 - learning_rate: 5.0000e-04
+Epoch 11/15
+104/104 - 104s - 1s/step - accuracy: 0.8433 - loss: 0.4008 - val_accuracy: 0.8163 - val_loss: 0.5102 - learning_rate: 5.0000e-04
+Epoch 1/20
+104/104 - 130s - 1s/step - accuracy: 0.8355 - loss: 0.4245 - val_accuracy: 0.8289 - val_loss: 0.4844 - learning_rate: 1.0000e-05
+Epoch 2/20
+104/104 - 120s - 1s/step - accuracy: 0.8481 - loss: 0.3809 - val_accuracy: 0.8163 - val_loss: 0.4800 - learning_rate: 1.0000e-05
+Epoch 3/20
+104/104 - 114s - 1s/step - accuracy: 0.8656 - loss: 0.3535 - val_accuracy: 0.8345 - val_loss: 0.4534 - learning_rate: 1.0000e-05
+Epoch 4/20
+104/104 - 113s - 1s/step - accuracy: 0.8734 - loss: 0.3211 - val_accuracy: 0.8275 - val_loss: 0.4779 - learning_rate: 1.0000e-05
+Epoch 5/20
+104/104 - 114s - 1s/step - accuracy: 0.8782 - loss: 0.3035 - val_accuracy: 0.8373 - val_loss: 0.4338 - learning_rate: 1.0000e-05
+Epoch 6/20
+104/104 - 133s - 1s/step - accuracy: 0.8872 - loss: 0.2865 - val_accuracy: 0.8373 - val_loss: 0.4390 - learning_rate: 1.0000e-05
+Epoch 7/20
+104/104 - 156s - 1s/step - accuracy: 0.9011 - loss: 0.2583 - val_accuracy: 0.8443 - val_loss: 0.4263 - learning_rate: 1.0000e-05
+Epoch 8/20
+104/104 - 161s - 2s/step - accuracy: 0.9044 - loss: 0.2424 - val_accuracy: 0.8457 - val_loss: 0.4293 - learning_rate: 1.0000e-05
+Epoch 9/20
+104/104 - 155s - 1s/step - accuracy: 0.9086 - loss: 0.2346 - val_accuracy: 0.8583 - val_loss: 0.4203 - learning_rate: 1.0000e-05
+Epoch 10/20
+104/104 - 166s - 2s/step - accuracy: 0.9149 - loss: 0.2166 - val_accuracy: 0.8541 - val_loss: 0.4139 - learning_rate: 1.0000e-05
+Epoch 11/20
+104/104 - 163s - 2s/step - accuracy: 0.9101 - loss: 0.2257 - val_accuracy: 0.8443 - val_loss: 0.4323 - learning_rate: 1.0000e-05
+Epoch 12/20
+104/104 - 177s - 2s/step - accuracy: 0.9218 - loss: 0.2007 - val_accuracy: 0.8541 - val_loss: 0.4308 - learning_rate: 1.0000e-05
+Epoch 13/20
+104/104 - 174s - 2s/step - accuracy: 0.9293 - loss: 0.1781 - val_accuracy: 0.8555 - val_loss: 0.4116 - learning_rate: 5.0000e-06
+Selected stage: fine validation accuracy: 0.8583450317382812

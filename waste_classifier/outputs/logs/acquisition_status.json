@@ -1,12 +1,13 @@
 {
-  "status": "blocked",
+  "status": "resolved_by_user_scope_change_realwaste_only",
   "blocker": "TrashNet archive download failed on both official GitHub hosts",
   "attempts": [
     {"host": "github.com", "error": "An existing connection was forcibly closed by the remote host"},
     {"host": "raw.githubusercontent.com", "error": "The response ended prematurely (ResponseEnded)"}
   ],
-  "dependencies": "Installation encountered repeated PyPI timeouts",
-  "training_executed": false,
-  "evaluation_executed": false,
-  "push_executed": false
+  "dependencies": "Installed successfully after retries",
+  "training_executed": true,
+  "evaluation_executed": true,
+  "push_executed": true,
+  "note": "Historical TrashNet acquisition failure retained for provenance; user subsequently requested RealWaste-only training."
 }
