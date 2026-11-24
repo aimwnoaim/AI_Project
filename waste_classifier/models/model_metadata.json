@@ -1,0 +1,96 @@
+{
+  "architecture": "MobileNetV2",
+  "input_size": [
+    224,
+    224,
+    3
+  ],
+  "class_names": [
+    "plastic",
+    "metal",
+    "paper_cardboard",
+    "other"
+  ],
+  "class_indices": {
+    "plastic": 0,
+    "metal": 1,
+    "paper_cardboard": 2,
+    "other": 3
+  },
+  "label_mapping": [
+    {
+      "source": "realwaste",
+      "original_category": "Cardboard",
+      "label": "paper_cardboard"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Food Organics",
+      "label": "other"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Glass",
+      "label": "other"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Metal",
+      "label": "metal"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Miscellaneous Trash",
+      "label": "other"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Paper",
+      "label": "paper_cardboard"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Plastic",
+      "label": "plastic"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Textile Trash",
+      "label": "other"
+    },
+    {
+      "source": "realwaste",
+      "original_category": "Vegetation",
+      "label": "other"
+    }
+  ],
+  "preprocessing": "RGB resize_with_pad 224x224, raw 0..255 input; model applies MobileNetV2 scaling exactly once",
+  "training_date": "2026-11-24T13:20:59.037294+00:00",
+  "seed": 42,
+  "dataset_sources": [
+    "realwaste"
+  ],
+  "selected_checkpoint": "fine",
+  "confidence_threshold": 0.8,
+  "tensorflow_version": "2.16.1",
+  "environment": {
+    "python": "3.11.9",
+    "tensorflow": "2.16.1",
+    "devices": [
+      "CPU"
+    ]
+  },
+  "training_config": {
+    "head_epochs": 15,
+    "fine_epochs": 20,
+    "batch": 32,
+    "head_lr": 0.001,
+    "fine_lr": 1e-05,
+    "fine_layers": 25,
+    "patience": 4,
+    "dropout": 0.3,
+    "smoke": false
+  },
+  "best_validation_accuracy": 0.8583450317382812,
+  "actual_batch": 32
+}
