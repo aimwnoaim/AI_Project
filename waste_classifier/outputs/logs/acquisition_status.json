@@ -1,0 +1,12 @@
+{
+  "status": "blocked",
+  "blocker": "TrashNet archive download failed on both official GitHub hosts",
+  "attempts": [
+    {"host": "github.com", "error": "An existing connection was forcibly closed by the remote host"},
+    {"host": "raw.githubusercontent.com", "error": "The response ended prematurely (ResponseEnded)"}
+  ],
+  "dependencies": "Installation encountered repeated PyPI timeouts",
+  "training_executed": false,
+  "evaluation_executed": false,
+  "push_executed": false
+}
