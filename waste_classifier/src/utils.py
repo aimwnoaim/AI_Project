@@ -23,6 +23,10 @@ def environment():
 def preprocess(path):
     image = tf.io.decode_image(tf.io.read_file(path), channels=3, expand_animations=False)
     image.set_shape([None, None, 3])
+    return preprocess_rgb(image)
+
+def preprocess_rgb(image):
+    """Shared raw RGB preprocessing for files and live camera frames."""
     return tf.image.resize_with_pad(tf.cast(image, tf.float32), 224, 224)
 
 def dataset(frame, batch=32, training=False, cache=False):

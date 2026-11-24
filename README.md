@@ -65,6 +65,19 @@ The pipeline command validates/prepares the dataset, runs synthetic unit tests, 
 
 ## Predict after training
 
+### Laptop webcam
+
+From `waste_classifier` in your activated Python environment:
+
+```powershell
+python -m pip install -r requirements-camera.txt
+python -m src.webcam
+```
+
+Press Q or Escape to exit. Try `--camera 1` if camera 0 is not your webcam. Close Zoom/Teams or other camera apps and allow desktop camera access if the camera cannot open. Present one item at a time with good lighting. The preview shows all class scores and returns retry below the threshold; it is whole-frame classification, not object detection. Frames remain local and are not recorded or uploaded. The webcam hardware preview has not been verified on this machine.
+
+The repository is downloadable remotely, but **no hosted inference API or web server is deployed**. Another computer can clone the repository, install dependencies, and run prediction locally. A future remote service must load the model and metadata and expose its own API.
+
 From `waste_classifier`:
 
 ```powershell
