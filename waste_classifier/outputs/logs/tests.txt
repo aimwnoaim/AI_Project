@@ -1,9 +1,9 @@
-2026-11-24 18:28:56.684622: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2026-11-24 18:28:59.711453: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-26 08:34:05.356780: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-26 08:34:11.404021: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
 test_class_order_and_mapping (test_pipeline.PipelineTests.test_class_order_and_mapping) ... ok
 test_discovery_and_corruption (test_pipeline.PipelineTests.test_discovery_and_corruption) ... ok
 test_invalid_prediction_metadata (test_pipeline.PipelineTests.test_invalid_prediction_metadata) ... ok
-test_model_save_load (test_pipeline.PipelineTests.test_model_save_load) ... 2026-11-24 18:29:23.549837: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+test_model_save_load (test_pipeline.PipelineTests.test_model_save_load) ... 2026-11-26 08:34:27.856135: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 WARNING:tensorflow:From C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\keras\src\backend\tensorflow\core.py:184: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
 
@@ -13,8 +13,66 @@ test_preprocessing (test_pipeline.PipelineTests.test_preprocessing) ... ok
 test_split_determinism_and_duplicate_groups (test_pipeline.PipelineTests.test_split_determinism_and_duplicate_groups) ... ok
 test_threshold_and_json (test_pipeline.PipelineTests.test_threshold_and_json) ... ok
 test_zip_traversal (test_pipeline.PipelineTests.test_zip_traversal) ... ok
+test_finetune_rejects_item_leakage (test_video_data.VideoDataTests.test_finetune_rejects_item_leakage) ... C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\matplotlib\_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\matplotlib\_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\matplotlib\mpl-data\stylelib\classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\matplotlib\mpl-data\stylelib\classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+ok
+test_identity (test_video_data.VideoDataTests.test_identity) ... ok
+test_import_and_grouped_split (test_video_data.VideoDataTests.test_import_and_grouped_split) ... C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\AI_Project\waste_classifier\src\video_data.py:59: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined=pd.concat([old,pd.DataFrame(rows)],ignore_index=True)
+Imported 2 frames: plastic, item=plastic0, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: plastic, item=plastic1, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: plastic, item=plastic2, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: plastic, item=plastic3, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: metal, item=metal0, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: metal, item=metal1, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: metal, item=metal2, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: metal, item=metal3, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: paper_cardboard, item=paper_cardboard0, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: paper_cardboard, item=paper_cardboard1, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: paper_cardboard, item=paper_cardboard2, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: paper_cardboard, item=paper_cardboard3, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: other, item=other0, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: other, item=other1, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: other, item=other2, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+Imported 2 frames: other, item=other3, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{07c6dc09-62b7-4324-a6d3-755c7ebc5a38}\Temp\tmpjgttdjag\inventory\frames.csv
+split  label
+test   metal              2
+       other              2
+       paper_cardboard    2
+       plastic            2
+train  metal              4
+       other              4
+       paper_cardboard    4
+       plastic            4
+val    metal              2
+       other              2
+       paper_cardboard    2
+       plastic            2
+split  label
+test   metal              2
+       other              2
+       paper_cardboard    2
+       plastic            2
+train  metal              4
+       other              4
+       paper_cardboard    4
+       plastic            4
+val    metal              2
+       other              2
+       paper_cardboard    2
+       plastic            2
+ok
+test_too_few_items (test_video_data.VideoDataTests.test_too_few_items) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 15.468s
+Ran 13 tests in 27.351s
 
 OK

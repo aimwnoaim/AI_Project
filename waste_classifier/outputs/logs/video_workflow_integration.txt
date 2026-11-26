@@ -1,0 +1,96 @@
+C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\AI_Project\waste_classifier\src\video_data.py:59: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  combined=pd.concat([old,pd.DataFrame(rows)],ignore_index=True)
+Imported 1 frames: plastic, item=plastic0, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+Imported 1 frames: plastic, item=plastic1, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+Imported 1 frames: plastic, item=plastic2, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+Imported 1 frames: metal, item=metal0, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+Imported 1 frames: metal, item=metal1, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+Imported 1 frames: metal, item=metal2, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+Imported 1 frames: paper_cardboard, item=paper_cardboard0, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+Imported 1 frames: paper_cardboard, item=paper_cardboard1, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+Imported 1 frames: paper_cardboard, item=paper_cardboard2, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+Imported 1 frames: other, item=other0, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+Imported 1 frames: other, item=other1, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+Imported 1 frames: other, item=other2, manifest=C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\inventory\frames.csv
+split  label
+test   metal              1
+       other              1
+       paper_cardboard    1
+       plastic            1
+train  metal              1
+       other              1
+       paper_cardboard    1
+       plastic            1
+val    metal              1
+       other              1
+       paper_cardboard    1
+       plastic            1
+2026-11-26 08:32:03.705862: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-26 08:32:09.314190: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+{"python": "3.11.9", "tensorflow": "2.16.1", "devices": ["CPU"]}
+2026-11-26 08:32:26.827860: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\keras\src\backend\tensorflow\core.py:184: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+Validation macro F1: 0.1000
+1/1 - 27s - 27s/step - accuracy: 0.2500 - loss: 8.2841 - val_accuracy: 0.2500 - val_loss: 6.2648 - val_macro_f1: 0.1000 - learning_rate: 1.0000e-05
+C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\keras\src\saving\saving_lib.py:415: UserWarning: Skipping variable loading for optimizer 'adam', because it has 22 variables whereas the saved optimizer has 2 variables.
+  saveable.load_own_variables(weights_store.get(inner_path))
+2026-11-26 08:33:35.028376: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-26 08:33:40.110303: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-26 08:33:51.913327: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\keras\src\backend\tensorflow\core.py:184: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+{
+  "count": 4,
+  "accuracy": 0.25,
+  "macro_f1": 0.1,
+  "weighted_f1": 0.1,
+  "report": {
+    "plastic": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "metal": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "paper_cardboard": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "other": {
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1-score": 0.4,
+      "support": 1.0
+    },
+    "accuracy": 0.25,
+    "macro avg": {
+      "precision": 0.0625,
+      "recall": 0.25,
+      "f1-score": 0.1,
+      "support": 4.0
+    },
+    "weighted avg": {
+      "precision": 0.0625,
+      "recall": 0.25,
+      "f1-score": 0.1,
+      "support": 4.0
+    }
+  },
+  "threshold": {
+    "value": 0.8,
+    "coverage": 1.0,
+    "accepted_accuracy": 0.25
+  }
+}
+Saved independent camera run: C:\Users\HP\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{34b949a6-7b83-448f-a671-d727c23fab00}\Temp\video_workflow_yu45uo16\run
+Synthetic video-to-training-to-evaluation integration PASSED; temporary outputs removed.

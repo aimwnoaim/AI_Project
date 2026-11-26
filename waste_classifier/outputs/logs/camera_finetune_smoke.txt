@@ -1,0 +1,8 @@
+2026-11-26 08:28:39.817135: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-26 08:28:45.319958: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+{"python": "3.11.9", "tensorflow": "2.16.1", "devices": ["CPU"]}
+2026-11-26 08:29:03.870713: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\HP\Documents\Codex\2026-11-13\i-x20\work\python311\Lib\site-packages\keras\src\backend\tensorflow\core.py:184: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+Camera fine-tune smoke passed: [array(5.6823215, dtype=float32), array(0., dtype=float32)]

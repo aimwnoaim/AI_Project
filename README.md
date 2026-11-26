@@ -13,7 +13,7 @@ The current experiment uses **RealWaste only**. TrashNet acquisition support rem
 
 ## Status
 
-**Trained and evaluated on RealWaste only.** Python 3.11.9, TensorFlow 2.16.1, CPU. All 9 synthetic unit tests and the pretrained smoke test passed. Both stages ran: 11 head-only epochs and 13 fine-tuning epochs, with early stopping. The final checkpoint was selected by validation accuracy, never test performance.
+**Trained and evaluated on RealWaste only.** Python 3.11.9, TensorFlow 2.16.1, CPU. All 13 current synthetic unit tests and the pretrained smoke test passed. Both original training stages ran: 11 head-only epochs and 13 fine-tuning epochs, with early stopping. The final published checkpoint was selected by validation accuracy, never test performance. The recorded-video fine-tuning workflow also passed a separate one-epoch synthetic integration check; it has not yet been trained on your recordings.
 
 | Metric | Measured result |
 |---|---:|
@@ -64,6 +64,10 @@ python -m src.run_pipeline --realwaste-path "C:\datasets\realwaste.zip"
 The pipeline command validates/prepares the dataset, runs synthetic unit tests, runs a small training smoke test, trains both stages with early stopping, checks export reload in another process, then evaluates the untouched test set. It stops on the first failure. It does not automatically commit or push. Archive the published `outputs/reports/test_*` files before intentionally reproducing the experiment: evaluation refuses to overwrite an existing test result. Reproduction overwrites model and training-log files, so preserve the published experiment in a separate checkout.
 
 ## Predict after training
+
+### Fine-tune from recorded videos
+
+See [VIDEO_FINETUNING.md](VIDEO_FINETUNING.md) for labeling recordings, extracting frames, physical-item grouped splits, training/validation/test, and using a new model. This workflow uses local video files and preserves the published RealWaste model. It does not add webcam capture or a hosted upload service.
 
 ### Laptop webcam
 
