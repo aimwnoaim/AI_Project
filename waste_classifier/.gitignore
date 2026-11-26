@@ -8,3 +8,10 @@ venv/
 *.partial
 data/processed/cache_*
 models/*_initial.keras
+data/camera/
+outputs/camera_runs/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
